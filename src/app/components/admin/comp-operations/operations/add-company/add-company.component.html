@@ -1,0 +1,33 @@
+<!-- <p>
+  add-company works!
+</p>
+
+<div></div>
+
+<router-outlet></router-outlet> -->
+
+<div>
+  <h4>Add Company</h4>
+  <form (ngSubmit)="onSubmit(f)" #f="ngForm">
+    <div>
+      <div class="form-group">
+        <input type="text" placeholder="Company ID" id="companyId" ngModel name="companyId" required/><br /><br />
+      </div>
+      <div class="form-group">
+        <input type="text" placeholder="Company Name"id="companyName" ngModel name="companyName" required/><br /><br />
+      </div>
+      <div class="form-group">
+        <input type="password" placeholder="Company Password" id="companyPassword" ngModel name="companyPassword" required/><br /><br />
+      </div>
+      <div class="form-group">
+        <input type="text" placeholder="Company Email" id="companyEmail" ngModel name="companyEmail" required email #e="ngModel"/><br /><br />
+      </div>
+      <input type="submit" [disabled]="!f.valid" />
+    </div>
+  </form>
+  <br /><br />
+  <div *ngIf = 'responseString && responseString.length; else falsyTemplate'>
+   {{responseString}}<br />
+  </div>
+  <ng-template #falsyTemplate></ng-template>
+</div>

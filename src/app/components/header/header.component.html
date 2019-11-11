@@ -1,0 +1,21 @@
+<!-- <p>header works!</p> -->
+<div>
+  <nav>
+    <a routerLink="/home" routerLinkActive="active-link">Home</a> |
+    <a routerLink="/admin" routerLinkActive="active-link">Admin</a> |
+    <a routerLink="/company" routerLinkActive="active-link">Company</a> |
+    <a routerLink="/customer" routerLinkActive="active-link">Customer</a> |
+    <a routerLink="/login" *ngIf="!loginService.isLoggedIn" routerLinkActive="active-link">Login</a>
+    <a href="javascript:void" (click)="logout()" *ngIf="loginService.isLoggedIn">Logout</a>
+  </nav>
+  <div>
+    <marquee>Testing....</marquee>
+    
+    
+
+  <h1>Welcome to Coupon System!</h1>
+</div>
+<!-- <hr> -->
+
+
+<router-outlet></router-outlet>

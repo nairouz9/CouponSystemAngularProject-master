@@ -1,0 +1,33 @@
+<!-- <p>view-coupon works!</p> -->
+
+<div>
+  <h4>View Coupon</h4>
+  <form (ngSubmit)="onSubmit(f)" #f="ngForm">
+    <div>
+      <div class="form-group">
+        <input type="text" placeholder="Coupon ID" id="couponId" ngModel name="couponId" required /><br /><br />
+      </div>
+
+      <input type="submit" [disabled]="!f.valid" />
+
+    </div>
+  </form>
+  <br /><br />
+  <div>
+    Coupon ID: {{coupon?.couponId}}<br />
+    Title: {{coupon?.title}}<br />
+    Start Date: {{customStartDate}}<br />
+    End Date: {{customEndDate}}<br />
+    Available Amount: {{coupon?.amount}}<br />
+    Type: {{coupon?.type}}<br />
+    Description: {{coupon?.couponMessage}}<br />
+    Price: {{coupon?.price | currency:'ILS':'symbol':'1.1-2'}}<br />
+    Image: <br />
+    <img [src]='coupon?.image' [title]='coupon?.title' [style.width.px]='imageWidth' [style.margin.px]='imageMargin' *ngIf = 'coupon && coupon.image' />
+  </div>
+  <br /><br />
+  <div *ngIf='responseString && responseString.length; else falsyTemplate'>
+    {{responseString}}<br />
+  </div>
+  <ng-template #falsyTemplate></ng-template>
+</div>

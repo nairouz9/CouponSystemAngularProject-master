@@ -1,0 +1,18 @@
+<div>
+  <h4>Remove Company</h4>
+  <form (ngSubmit)="onSubmit(f)" #f="ngForm">
+    <div>
+      <div class="form-group">
+        <input type="text" placeholder="Company ID" id="companyId" ngModel name="companyId" required /><br /><br />
+      </div>
+
+      <input type="submit" [disabled]="!f.valid" />
+
+    </div>
+  </form>
+  <br /><br />
+  <div *ngIf='responseString && responseString.length; else falsyTemplate'>
+    {{responseString}}<br />
+  </div>
+  <ng-template #falsyTemplate></ng-template>
+</div>

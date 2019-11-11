@@ -1,0 +1,51 @@
+/* *{
+    font-family: 'Fjalla One', sans-serif;
+} */
+
+section { 
+    height: 100%;
+    border: 4px solid black;
+    background-color: blue;
+     background-image: url("https://dsvsbigncb06y.cloudfront.net/site/diving/thailand/liveaboard-thailand-phi-phi-island-xxl.jpg"); 
+    background-image: 'https://dsvsbigncb06y.cloudfront.net/site/diving/thailand/liveaboard-thailand-phi-phi-island-xxl.jpg';
+    text-align: center;
+    box-sizing:cover;
+    display: grid;
+    grid-template-rows: 13% 80% 7%;
+    grid-template-columns: max-content;
+ }
+
+header {
+    grid-column: span 12;
+    border: 1px solid black;
+}
+
+main {
+    grid-column: span 12;
+    border: 1px solid black;
+}
+
+footer {
+    grid-column: span 12;
+    border: 1px solid black;
+}
+
+
+
+/* aside {
+    grid-column: span 2;
+    border: 2px solid black;
+} */
+
+
+
+
+/* h1 {
+    text-align: center;
+}
+
+nav {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+} */

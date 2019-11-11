@@ -1,0 +1,74 @@
+<!-- <p>view-my-coupons-by-type works!</p> -->
+
+<div>
+  <div>
+    <h4>View All My Coupons By Type</h4>
+    <form (ngSubmit)="onSubmit(f)" #f="ngForm">
+        <div class="form-group">
+          Choose a type:<br>
+          <select id="typeName" name="typeName" class="form-contorl" placeholder="Type" required ngModel>
+            <option value="Restaurants">RESTAURANTS</option>
+            <option value="Electricity">ELECTRICITY</option>
+            <option value="Food">FOOD</option>
+            <option value="Health">HEALTH</option>
+            <option value="Sports">SPORTS</option>
+            <option value="Camping">CAMPING</option>
+            <option value="Traveling">TRAVELING</option>
+            <option value="Drinks">DRINKS</option>
+          </select>
+            
+          </div>
+      <input type="submit" />
+    </form>
+    <br><br>
+    <div class='panel-body'>
+      <div class='row'>
+          <div class='col-md-2'>Filter by title:</div>
+          <div class='col-md-4'><input type='text' [(ngModel)] = 'listFilter'></div>
+      </div>
+      <div class='row'>
+          <div class="col-md-6"><h3>Filtered by: {{listFilter}}</h3></div>
+      </div>
+      <div class='table-responsive' >  
+          <table class='table' >
+            <thead>
+              <tr>
+                  <th>
+                      <button class='btn btn-primary' (click) = "toggleImage()" >
+                        {{showImage ? 'Hide': 'Show'}} image
+                      </button>
+                  </th>
+                  <th>Coupon ID</th>
+                  <th>Title</th>
+                  <th>Start Date</th>
+                  <th>End Date</th>
+                  <th>Available Amount</th>
+                  <th>Type</th>
+                  <th>Description</th>
+                  <th>Price</th>
+              </tr>
+          </thead>
+              <tbody>
+                  <tr *ngFor = 'let coupon of coupons| couponFilter: listFilter'>
+                    <td><img [src] = 'coupon?.image' [title] = 'coupon?.title'
+                      [style.width.px] = 'imageWidth' [style.margin.px] = 'imageMargin' *ngIf ='showImage'/></td>
+                    <td>{{coupon?.couponId}}</td>
+                    <td>{{coupon?.title}}</td>
+                    <td>{{coupon?.customStartDate}}</td>
+                    <td>{{coupon?.customEndDate}}</td>
+                    <td>{{coupon?.amount}}</td>
+                    <td>{{coupon?.type}}</td>
+                    <td>{{coupon?.couponMessage}}</td>
+                    <td>{{coupon?.price}}</td>
+                  </tr>
+              </tbody> 
+          </table>
+      </div>
+    <br /><br />
+    <div *ngIf='responseString && responseString.length; else falsyTemplate'>
+      {{responseString}}<br />
+    </div>
+    <ng-template #falsyTemplate>
+
+    </ng-template>
+  </div>

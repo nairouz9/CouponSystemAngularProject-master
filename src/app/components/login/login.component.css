@@ -1,0 +1,40 @@
+div {
+	margin: 100px;
+    /* padding: 100px; */
+    text-align: center;
+}
+
+.login {
+    width: 40%;
+	height: 250px;
+     background-color: violet; 
+    border: 2px bold black;
+    padding: 20px;
+    margin-top: 90px;
+    margin-left: 600px;
+    /* margin-right: 20px; */
+	float: bottom;
+}
+
+button[type="Login"]:hover {
+    background-color:violet;
+	height: 25px;
+	width: 60px;
+	border: 2px bold black;
+	border-radius: 3px;
+	font-size: 16px;
+}
+
+button[type="reset"]:hover {
+    background-color:violet;
+	height: 25px;
+	width: 60px;
+	border: 2px bold black;
+	border-radius: 3px;
+	font-size: 16px;
+}
+
+
+/* .wow animated zoomIn {
+	data-wow-delay="0.3s";
+} */

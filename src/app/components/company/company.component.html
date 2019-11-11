@@ -1,0 +1,22 @@
+<h3>Company Page</h3>
+
+<!-- <div>
+  <nav>
+    <a class = 'company-menu'>{{pageTitle}}</a><br>
+      <a routerLink="/addCoupon">Add Coupon</a> |
+      <a routerLink="/removeCoupon">Remove Coupon</a> |
+      <a routerLink="/updateCoupon">Update Coupon</a> |
+      <a routerLink="/viewAllCoupons">View All Coupons</a> |
+      <a routerLink="/viewCoupon">View Coupon</a>
+  </nav>
+</div> -->
+
+<div>
+  <!-- <a class = 'company-menu'>{{pageTitle}}</a><br> -->
+    <a [routerLink]= "['compDetails']">Company Details</a> |
+    <a [routerLink]= "['compActions']">Company Actions</a>
+</div>
+
+
+
+<router-outlet></router-outlet>

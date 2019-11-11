@@ -1,0 +1,83 @@
+[
+    {
+        "couponId":1,
+        "title":"SPORT Coupon",
+        "startDate":"1/4/2019",
+        "endDate":"31/12/2019",
+        "amount":5,
+        "type": "Sports",
+        "couponMessage": "VIP ONLY",
+        "price": 50.90,
+        "image": "https://www.snowmagazine.com/media/reviews/photos/original/59/e6/5f/Alpe-dhuez-istock-1-40-1450092356.jpg",
+        "active":true
+    },
+
+    {
+        "couponId":2,
+        "title":"HEALTH Coupon",
+        "startDate":"1/4/2019",
+        "endDate":"31/12/2019",
+        "amount":5,
+        "type": "Health",
+        "couponMessage": "VIP ONLY",
+        "price": 70.90,
+        "image": "https://www.snowmagazine.com/media/reviews/photos/original/59/e6/5f/Alpe-dhuez-istock-1-40-1450092356.jpg",
+        "active":true
+    },
+
+    {
+        "couponId":3,
+        "title":"DRINKS Coupon",
+        "startDate":"1/4/2019",
+        "endDate":"31/12/2019",
+        "amount":5,
+        "type": "Drinks",
+        "couponMessage": "VIP ONLY",
+        "price": 60.90,
+        "image": "https://www.snowmagazine.com/media/reviews/photos/original/59/e6/5f/Alpe-dhuez-istock-1-40-1450092356.jpg",
+        "active":true
+    },
+
+    {
+    "couponId":4,
+    "title":"ELECTRICITY Coupon",
+    "startDate":"1/4/2019",
+    "endDate":"31/12/2019",
+    "amount":5,
+    "type": "Electricity",
+    "couponMessage": "VIP ONLY",
+    "price": 80.50,
+    "image": "https://www.snowmagazine.com/media/reviews/photos/original/59/e6/5f/Alpe-dhuez-istock-1-40-1450092356.jpg",
+    "active":true
+},
+
+    {
+        "couponId":12,
+        "title":"BBB",
+        "startDate":"1/4/2019",
+        "endDate":"31/5/2019",
+        "amount":5,
+        "type": "Resturatns",
+        "couponMessage": "Dinner for couple",
+        "price": 70.3,
+        "image": "https://images1.calcalist.co.il/PicServer2/20122005/522772/YE1218528_l.jpg",
+        "active":true
+    },
+
+    {
+        "couponId":13,
+        "title":"Spa",
+        "startDate":"1/4/2019",
+        "endDate":"31/7/2019",
+        "amount":15,
+        "type": "Health",
+        "couponMessage": "Free entrance for spa facilities",
+        "price": 249.9,
+        "image": "https://img.grouponcdn.com/iam/NG2PuHCH332Ax1sL19w4GDDyvyE/NG-1500x900/v1/c700x420.jpg",
+        "active":true
+
+    }
+
+
+]
+

@@ -1,0 +1,49 @@
+<!-- <p>add-coupon works!</p> -->
+
+<div>
+  <h4>Add Coupon</h4>
+  <form (ngSubmit)="onSubmit(f)" #f="ngForm">
+    <div>
+      <div class="form-group">
+        <input type="text" placeholder="Coupon ID" id="couponId" ngModel name="couponId" required/><br /><br />
+      </div>
+      <div class="form-group">
+        <input type="text" placeholder="Title" id="title" ngModel name="title" required/><br /><br />
+      </div>
+      <div class="form-group">
+        <input type="text" placeholder="End Date" id="endDate" ngModel name="endDate" required/><br>format(dd/MM/yyyy)<br /><br />
+      </div>
+      <div class="form-group">
+        <input type="text" placeholder="Amount" id="amount" ngModel name="amount" required #e="ngModel"/><br /><br />
+      </div>
+      <div class="form-group">
+        Choose a type of coupon:<br>
+        <select id="type" name="type" class="form-contorl" required ngModel>
+          <option value="RESTAURANTS">RESTAURANTS</option>
+          <option value="ELECTRICITY">ELECTRICITY</option>
+          <option value="FOOD">FOOD</option>
+          <option value="HEALTH">HEALTH</option>
+          <option value="SPORTS">SPORTS</option>
+          <option value="CAMPING">CAMPING</option>
+          <option value="TRAVELING">TRAVELING</option>
+          <option value="DRINKS">DRINKS</option>
+        </select>
+      </div><br>
+      <div class="form-group">
+        <input type="text" placeholder="Description" id="couponMessage" ngModel name="couponMessage" required/><br /><br />
+      </div>
+      <div class="form-group">
+        <input type="text" placeholder="Price" id="price" ngModel name="price" required/><br /><br />
+      </div>
+      <div class="form-group">
+        <input type="text" placeholder="Image URL" id="image" ngModel name="image" required/><br /><br />
+      </div>
+      <input type="submit" [disabled]="!f.valid" />
+    </div>
+  </form>
+  <br /><br />
+  <div *ngIf = 'responseString && responseString.length; else falsyTemplate'>
+    {{responseString}}<br />
+  </div>
+  <ng-template #falsyTemplate></ng-template>
+</div>

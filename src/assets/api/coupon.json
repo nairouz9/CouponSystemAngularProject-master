@@ -1,0 +1,12 @@
+{
+    "couponId":1,
+    "title":"SPORT Coupon",
+    "startDate":"1/4/2019",
+    "endDate":"31/12/2019",
+    "amount":5,
+    "type": "Sports",
+    "couponMessage": "VIP ONLY",
+    "price": 50.90,
+    "image": "https://www.snowmagazine.com/media/reviews/photos/original/59/e6/5f/Alpe-dhuez-istock-1-40-1450092356.jpg",
+    "active":true
+}

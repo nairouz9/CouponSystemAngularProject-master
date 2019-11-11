@@ -1,0 +1,20 @@
+ [
+    {
+        "companyId" : 1,
+        "companyName" : "adidas",
+        "companyPassword": "123",
+        "companyEmail" : "adidas@gmail.com"
+    },
+    {
+        "companyId" : 2,
+        "companyName" : "TEVA",
+        "companyPassword": "456",
+        "companyEmail" : "teva@gmail.com"
+    },
+    {
+        "companyId" : 3,
+        "companyName" : "Coca Cola",
+        "companyPassword": "789",
+        "companyEmail" : "cocacola@gmail.com"
+    }
+]

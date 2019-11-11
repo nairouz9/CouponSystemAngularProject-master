@@ -1,0 +1,27 @@
+<!-- <p>view-company works!</p> -->
+
+<div>
+  <h4>View Company</h4>
+  <form (ngSubmit)="onSubmit(f)" #f="ngForm">
+      <div>
+          <div class="form-group">
+            <input type="text" placeholder="Company ID" id="companyId" ngModel name="companyId" required/><br /><br />
+          </div>
+
+       <input type = "submit" [disabled]="!f.valid"/>
+ 
+      </div>
+  </form>
+      <br /><br />
+      <div>
+        Company ID: {{company?.companyId}}<br />
+        Company Name: {{company?.companyName}}<br />
+        Company Password: {{company?.companyPassword}}<br />
+        Company Email: {{company?.companyEmail}}<br />
+      </div>
+      <br /><br />
+      <div *ngIf='responseString && responseString.length; else falsyTemplate'>
+        {{responseString}}<br />
+      </div>
+      <ng-template #falsyTemplate ></ng-template>
+</div>

@@ -1,0 +1,24 @@
+<!-- <p>add-customer works!</p> -->
+
+<div>
+  <h4>Add Customer</h4>
+  <form (ngSubmit)="onSubmit(f)" #f="ngForm">
+    <div>
+      <div class="form-group">
+        <input type="text" placeholder="Customer ID" id="customerId" ngModel name="customerId" required/><br /><br />
+      </div>
+      <div class="form-group">
+        <input type="text" placeholder="Customer Name" id="customerName" ngModel name="customerName" required/><br /><br />
+      </div>
+      <div class="form-group">
+        <input type="password" placeholder="Customer Password" id="customerPassword" ngModel name="customerPassword" required/><br /><br />
+      </div>
+      <input type="submit" [disabled]="!f.valid" />
+    </div>
+  </form>
+  <br /><br />
+  <div *ngIf = 'responseString && responseString.length; else falsyTemplate'>
+    {{responseString}}<br />
+  </div>
+  <ng-template #falsyTemplate></ng-template>
+</div>

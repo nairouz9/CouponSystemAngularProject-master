@@ -1,0 +1,26 @@
+<!-- <p>view-customer works!</p> -->
+
+<div>
+  <h4>View Customer</h4>
+  <form (ngSubmit)="onSubmit(f)" #f="ngForm">
+      <div>
+          <div class="form-group">
+            <input type="text" placeholder="Customer ID" id="customerId" ngModel name="customerId" required/><br /><br />
+          </div>
+
+          <input type = "submit" [disabled]="!f.valid"/>
+
+      </div>
+    </form>
+      <br /><br />
+      <div>
+        Customer ID: {{customer?.customerId}}<br />
+        Customer Name: {{customer?.customerName}}<br />
+        Customer Password: {{customer?.customerPassword}}<br />
+      </div>
+      <br /><br />
+      <div *ngIf='responseString && responseString.length; else falsyTemplate'>
+        {{responseString}}<br />
+      </div>
+      <ng-template #falsyTemplate></ng-template>
+</div>

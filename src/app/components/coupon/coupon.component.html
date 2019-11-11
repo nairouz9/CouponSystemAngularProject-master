@@ -1,0 +1,54 @@
+<!-- <p>coupon works!</p> -->
+
+<div class='panel panel-primary'>
+  <div class='panel-heading' >
+      {{pageTitle}}
+  </div>
+  <div class='panel-body'>
+      <div class='row'>
+          <div class='col-md-2'>Filter by:</div>
+          <div class='col-md-4'><input type='text' [(ngModel)] = 'listFilter'></div>
+      </div>
+      <div class='row'>
+          <div class="col-md-6"><h3>Filtered by: {{listFilter}}</h3></div>
+      </div>
+      <div class='table-responsive' *ngIf = 'coupons && coupons.length; else falsyTemplate'>  
+          <table class='table' >
+              <thead>
+                  <tr>
+                      <th>
+                          <button class='btn btn-primary' (click) = 'toggleImage()' >
+                            {{showImage ? 'Hide': 'Show'}} Image
+                          </button>
+                      </th>
+                      <th>Coupon</th>
+                      <th>ID</th>
+                      <th>Start Date</th>
+                      <th>End Date</th>
+                      <th>Amount</th>
+                      <th>Type</th>
+                      <th>Description</th>
+                      <th>Price</th>
+                  </tr>
+              </thead>
+              <tbody>
+                  <tr *ngFor = 'let coupon of coupons | couponFilter:listFilter'>
+                      <td><img [src] = 'coupon.image' [title] = 'coupon.title'
+                           [style.width.px] = 'imageWidth' [style.margin.px] = 'imageMargin' *ngIf = 'showImage'/></td>
+                      <td>{{coupon.title}}</td>
+                      <td>{{coupon.couponId}}</td>
+                      <td>{{coupon.startDate}}</td>
+                      <td>{{coupon.endDate}}</td>
+                      <td>{{coupon.amount}}</td>
+                      <td>{{coupon.type}}</td>
+                      <td>{{coupon.couponMessage}}</td>
+                      <td>{{coupon.price | currency:'ILS':'symbol':'1.1-2'}}</td>
+                  </tr>
+              </tbody>
+          </table>
+      </div>
+      <ng-template #falsyTemplate>
+          <h3>No Records were found !!!</h3>
+      </ng-template>
+ </div>
+</div>

@@ -1,0 +1,14 @@
+div {
+    height: 100%;
+    text-align: center;
+    background-color:black;
+}
+
+p {
+    margin: 0;
+    color:white;
+    position: relative;
+    top: 30%; 
+    transform: translateY(-50%); 
+    font-size: 25px;
+}

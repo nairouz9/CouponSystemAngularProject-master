@@ -1,0 +1,57 @@
+div {
+    height: 100%;
+}
+
+nav {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+} 
+
+h1 {
+    text-align: center;
+    margin: 0;
+    color: black;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 6vh;
+
+    text-shadow: black -1px -2px 2em;
+} 
+
+.active-link {
+     color:black; 
+    font-weight: bold;
+}
+
+a {
+    font-size: 3vh;
+    /* font-size: x-large; */
+    color:black;
+    /* margin: 10px; */
+    /* display: block; */
+ } 
+
+
+
+
+
+
+
+
+
+
+ /* h1 {
+    text-align: center;
+} */
+
+/* nav {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+} */
+
+/* div {
+    background-color: yellowgreen;
+} */
