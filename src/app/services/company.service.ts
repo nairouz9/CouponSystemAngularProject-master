@@ -11,8 +11,8 @@ import { ICompany } from '../components/company/ICompany';
 })
 export class CompanyService {
 
-  // private BASE_URL = 'http://localhost:8080/CouponSystemSpringProj/rest/company';
-  private BASE_URL = 'http://localhost:8080/CouponSystemSpringProj/company';
+
+  private BASE_URL = 'http://localhost:8080/company';
 
   private httpOptions = {
     headers: new HttpHeaders({

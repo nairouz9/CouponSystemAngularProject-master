@@ -1,24 +1,10 @@
-// import { Component, OnInit } from '@angular/core';
 
-// @Component({
-//   selector: 'app-view-my-coupons-by-type',
-//   templateUrl: './view-my-coupons-by-type.component.html',
-//   styleUrls: ['./view-my-coupons-by-type.component.css']
-// })
-// export class ViewMyCouponsByTypeComponent implements OnInit {
-
-//   constructor() { }
-
-//   ngOnInit() {
-//   }
-
-// }
 
 import { Component, OnInit, ViewChild, OnDestroy } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Subscription } from 'rxjs';
 import { ICoupon } from 'src/app/components/coupon/ICoupon';
-// import { CompanyService } from 'src/app/services/company.service';
+
 import { CustomerService } from 'src/app/services/customer.service';
 
 @Component({

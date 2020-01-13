@@ -11,8 +11,8 @@ import { IStatus } from '../models/IStatus';
 })
 export class CustomerService {
 
-    // private BASE_URL = 'http://localhost:8080/CouponSystemSpringProj/webapi/customer';
-    private BASE_URL = 'http://localhost:8080/CouponSystemSpringProj/customer';
+
+    private BASE_URL = 'http://localhost:8080/customer';
     private assetURL = './assets/api/coupons.json';
 
     private httpOptions = {
@@ -91,7 +91,7 @@ export class CustomerService {
 
             viewCouponsList(): Observable<ICoupon[]> {
               const url = `${this.BASE_URL}/getAllCouponsList`
-              // const url = `${this.assetURL}/selectAllCompanies`
+             
                 return this.http.get<ICoupon[]>(url).pipe(
                   catchError(
                     (err: HttpErrorResponse) => {

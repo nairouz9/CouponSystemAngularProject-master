@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';//, OnInit
+import { Component } from '@angular/core';
 import { LoginService } from 'src/app/services/login.service';
 import { Router } from '@angular/router';
 
@@ -7,12 +7,10 @@ import { Router } from '@angular/router';
   templateUrl: './layout.component.html',
   styleUrls: ['./layout.component.css']
 })
-export class LayoutComponent {//implements OnInit 
+export class LayoutComponent {
 
  public constructor(private loginService: LoginService, private router: Router) { }
 
-  // ngOnInit() {
-  // }
 
   public logout(): void {
     this.loginService.logout();

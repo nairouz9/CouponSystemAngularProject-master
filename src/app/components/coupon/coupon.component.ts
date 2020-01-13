@@ -1,18 +1,4 @@
-// import { Component, OnInit } from '@angular/core';
 
-// @Component({
-//   selector: 'app-coupon',
-//   templateUrl: './coupon.component.html',
-//   styleUrls: ['./coupon.component.css']
-// })
-// export class CouponComponent implements OnInit {
-
-//   constructor() { }
-
-//   ngOnInit() {
-//   }
-
-// }
 
 import {Component, ViewEncapsulation, OnInit, DoCheck, OnDestroy} from '@angular/core';
 import { ICoupon } from './ICoupon';

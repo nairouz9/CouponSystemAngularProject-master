@@ -31,7 +31,7 @@ import { ViewCouponComponent } from './components/company/comp-actions/actions/v
 import { ViewAllCouponsComponent } from './components/company/comp-actions/actions/view-all-coupons/view-all-coupons.component';
 import { ViewCouponByTypeComponent } from './components/company/comp-actions/actions/view-coupon-by-type/view-coupon-by-type.component';
 import { CustActionsComponent } from './components/customer/cust-actions/cust-actions.component';
-// import { PurchaseCouponComponent } from './components/customer/cust-actions/actions/purchase-coupon/purchase-coupon.component';
+
 import { ViewAllMyCouponsComponent } from './components/customer/cust-actions/actions/view-all-my-coupons/view-all-my-coupons.component';
 import { ViewMyCouponsByPriceComponent } from './components/customer/cust-actions/actions/view-my-coupons-by-price/view-my-coupons-by-price.component';
 import { ViewMyCouponsByTypeComponent } from './components/customer/cust-actions/actions/view-my-coupons-by-type/view-my-coupons-by-type.component';
@@ -57,9 +57,9 @@ import { couponFilterPipe } from './components/coupon/coupon-filter.pipe';
                  ViewAllCouponsComponent, ViewCouponByTypeComponent, CustActionsComponent,  
                  ViewAllMyCouponsComponent, ViewMyCouponsByPriceComponent, ViewMyCouponsByTypeComponent, 
                  FooterComponent, HeaderComponent, DetailsComponent, CompanyDetailsComponent, CompanyFilterPipe,
-                 CustomerDetailsComponent, CouponListComponent, CustomerFilterPipe, CouponFilterPipe, couponFilterPipe],//PurchaseCouponComponent
+                 CustomerDetailsComponent, CouponListComponent, CustomerFilterPipe, CouponFilterPipe, couponFilterPipe],
   imports: [ BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
-  //providers: [],
+
   bootstrap: [LayoutComponent]
 })
 export class AppModule { }

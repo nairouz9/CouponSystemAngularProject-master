@@ -29,7 +29,7 @@ import { ViewAllCouponsComponent } from './components/company/comp-actions/actio
 import { ViewCouponComponent } from './components/company/comp-actions/actions/view-coupon/view-coupon.component';
 import { ViewCouponByTypeComponent } from './components/company/comp-actions/actions/view-coupon-by-type/view-coupon-by-type.component';
 import { CustActionsComponent } from './components/customer/cust-actions/cust-actions.component';
-// import { PurchaseCouponComponent } from './components/customer/cust-actions/actions/purchase-coupon/purchase-coupon.component';
+
 import { ViewAllMyCouponsComponent } from './components/customer/cust-actions/actions/view-all-my-coupons/view-all-my-coupons.component';
 import { ViewMyCouponsByPriceComponent } from './components/customer/cust-actions/actions/view-my-coupons-by-price/view-my-coupons-by-price.component';
 import { ViewMyCouponsByTypeComponent } from './components/customer/cust-actions/actions/view-my-coupons-by-type/view-my-coupons-by-type.component';
@@ -72,7 +72,7 @@ const routes: Routes = [
     { path: "custDetails", component: CustomerDetailsComponent },
     { path: 'couponList', component: CouponListComponent },
     { path: "custActions", component: CustActionsComponent, children: [
-      // { path: 'purchaseCoupon', component: PurchaseCouponComponent },
+     
       { path: 'viewAllMyCoupons', component: ViewAllMyCouponsComponent },
       { path: 'viewMyCouponsByPrice', component: ViewMyCouponsByPriceComponent },
       { path: 'viewMyCouponsByType', component: ViewMyCouponsByTypeComponent },
@@ -83,57 +83,10 @@ const routes: Routes = [
   {path: "**", component: Page404Component}
 ];
 
-// const compOperationsChildren: Routes = [
-//   { path: 'addCompany', component: AddCompanyComponent },
-//   { path: 'removeCompany', component: RemoveCompanyComponent },
-//   { path: 'updateCompany', component: UpdateCompanyComponent },
-//   { path: 'viewAllCompanies', component: ViewAllCompaniesComponent },
-//   { path: 'viewCompany', component: ViewCompanyComponent }
-// ]
 
-// const custOperationsChildren: Routes = [
-//     { path: 'addCustomer', component: AddCustomerComponent },
-//     { path: 'removeCustomer', component: RemoveCustomerComponent },
-//     { path: 'updateCustomer', component: UpdateCustomerComponent },
-//     { path: 'viewAllCustomers', component: ViewAllCustomersComponent },
-//     { path: 'viewCustomer', component: ViewCustomerComponent },
-//   ]
-
-//   const compActionsChildren: Routes = [
-//     { path: 'addCoupon', component: AddCouponComponent },
-//     { path: 'removeCoupon', component: RemoveCouponComponent },
-//     { path: 'updateCoupon', component: UpdateCouponComponent },
-//     { path: 'viewAllCoupons', component: ViewAllCouponsComponent },
-//     { path: 'viewCoupon', component: ViewCouponComponent },
-//     { path: 'viewCouponByType', component: ViewCouponByTypeComponent },
-//   ]
-
-//   const custActionsChildren: Routes = [
-//     { path: 'purchaseCoupon', component: PurchaseCouponComponent },
-//     { path: 'viewAllMyCoupons', component: ViewAllMyCouponsComponent },
-//     { path: 'viewMyCouponsByPrice', component: ViewMyCouponsByPriceComponent },
-//     { path: 'viewMyCouponsByType', component: ViewMyCouponsByTypeComponent },
-//   ]
-
-// const routes: Routes = [
-//   {path: "home", component: HomeComponent},
-//   {path: "admin", canActivate: [AdminGuardService], component: AdminComponent, children: [
-//     { path: "compOperations", component: CompOperationsComponent, children: compOperationsChildren},
-//     { path: "custOperations", component: CustOperationsComponent, children: custOperationsChildren}
-//   ]},
-//   {path: "company", canActivate: [CompanyGuardService], component: CompanyComponent, children: [
-//     { path: "compActions", component: CompActionsComponent, children: compActionsChildren}
-//   ]},
-//   {path: "customer", canActivate: [CustomerGuardService], component: CustomerComponent, children: [
-//     { path: "custActions", component: CustActionsComponent, children: custActionsChildren}
-//   ]},
-//   {path: "login", component: LoginComponent},
-//   {path: "", redirectTo: "/home", pathMatch: "full"},
-//   {path: "**", component: Page404Component}
-// ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],// (routes, { useHash: true })
+  imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
 

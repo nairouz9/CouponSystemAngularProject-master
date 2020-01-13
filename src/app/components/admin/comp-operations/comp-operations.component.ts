@@ -1,19 +1,15 @@
-import { Component } from '@angular/core';//, OnInit
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-comp-operations',
   templateUrl: './comp-operations.component.html',
   styleUrls: ['./comp-operations.component.css']
 })
-export class CompOperationsComponent {// implements OnInit
+export class CompOperationsComponent {
 
   constructor() { }
  
       
 
-  // ngOnInit() {
-  // }
-
-   
   
 }

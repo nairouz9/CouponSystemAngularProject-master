@@ -1,33 +1,30 @@
 
-<section>
   <div id="loginForm">
-      <form (ngSubmit)="onSubmit()" #f="ngForm" action="login" method="post">
+      <form  action="login" method="post">
         <p id="pp">Please Enter Your Details:</p>
         <br>
         <label for id="Username">Username: </label>
-        <input type="text" id="username" ngModel name="username" required  placeholder="Enter Your Name...">
+        <input type="text" id="username"  name="username" required  placeholder="Enter Your Name..." [(ngModel)]="credentials.username">
       <br><br>
          <label for id="password">Password: </label>
-        <input type="password" id="password" ngModel name="password" password required placeholder="Enter Your password...">
+        <input type="password" id="password"  name="password" password required placeholder="Enter Your password..."  [(ngModel)]="credentials.password">
       <br><br>
   
         <label for id="type1">Choose Your Client Type: </label>
-        <select id="clientType" name="clientType" ngModel>
+        <select id="clientType" name="clientType" >
         <option selected disabled>Select Type</option>
         <option value="ADMIN">ADMIN</option>
         <option value="COMPANY">COMPANY</option>
         <option value="CUSTOMER">CUSTOMER</option>
         </select>
       
-        <h3><button type="submit" class="submit" (click)="login()">LOGIN 	<i class="fa fa-user-circle-o" style="font-size:30px;"></i></button>
+        <h3><button  class="submit" (click)="login()">LOGIN 	<i class="fa fa-user-circle-o" style="font-size:30px;"></i></button>
         <button type="reset" class="button"	>RESET	<i class="fa fa-eraser" style="font-size:30px;"></i></button></h3>
         <a routerLink="/register" routerLinkActive ="active">Register</a>
-        <p><small>Remember Me? </small><input #checkbox="ngModel" type="checkbox" [(ngModel)]="userLogin.rememberMe" name="checkbox"> <br>
-        </p>
-        <button [disabled]="loginForm.invalid" class="btn btn-primary" (click)="sendLogin()">Apply</button>
+       
+        
       </form>
     </div>
-  </section>
  
      
     

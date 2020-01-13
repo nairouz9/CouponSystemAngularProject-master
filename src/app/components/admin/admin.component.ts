@@ -7,7 +7,6 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AdminComponent implements OnInit {
 
-  // public pageTitle  = 'Welcome Admin!';
 
   constructor() { }
 

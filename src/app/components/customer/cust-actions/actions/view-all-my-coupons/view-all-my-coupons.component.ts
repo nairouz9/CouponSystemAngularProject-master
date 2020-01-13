@@ -1,18 +1,4 @@
-// import { Component, OnInit } from '@angular/core';
 
-// @Component({
-//   selector: 'app-view-all-my-coupons',
-//   templateUrl: './view-all-my-coupons.component.html',
-//   styleUrls: ['./view-all-my-coupons.component.css']
-// })
-// export class ViewAllMyCouponsComponent implements OnInit {
-
-//   constructor() { }
-
-//   ngOnInit() {
-//   }
-
-// }
 
 import { Component, OnInit, ViewChild, OnDestroy } from '@angular/core';
 import { NgForm } from '@angular/forms';

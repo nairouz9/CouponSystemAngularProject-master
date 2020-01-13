@@ -10,7 +10,7 @@ export class CompanyComponent implements OnInit {
   constructor() {}
   
 
-  // public pageTitle  = 'Company Page';
+  
 
   
 

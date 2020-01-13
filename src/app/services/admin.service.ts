@@ -11,9 +11,9 @@ import { IStatus } from '../models/IStatus';
 export class AdminService {
 
 
-  // private BASE_URL = 'http://localhost:8080/CouponSystemSpringProj/rest/admin';
-  private BASE_URL = 'http://localhost:8080/CouponSystemSpringProj/admin';
-  private assetURL = './assets/api/companies.json';  //= './assets/api/company.json';
+  
+  private BASE_URL = 'http://localhost:8080/admin';
+  private assetURL = './assets/api/companies.json';  
   private assetURLcompany1 = "./assets/api/company.json";
   private assetURL1 = "";
 
@@ -78,7 +78,7 @@ export class AdminService {
 
   viewAllCompanies(): Observable<ICompany[]> {
     const url = `${this.assetURL}`
-  // const url = `${this.BASE_URL}/selectAllCompanies`
+
     return this.http.get<ICompany[]>(url).pipe(
       catchError(
         (err: HttpErrorResponse) => {
@@ -92,7 +92,7 @@ export class AdminService {
 
   viewCompany(companyId: number): Observable<ICompany> {
     const url = `${this.assetURLcompany1}`
-    // const url = `${this.BASE_URL}/getCompany/${companyId}`
+
     return this.http.get<ICompany>(url).pipe(
       catchError(
         (err: HttpErrorResponse) => {

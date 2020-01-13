@@ -1,4 +1,4 @@
-/* You can add global styles to this file, and also import other style files */
+
 
 html, body {
     height: 100%;
@@ -6,9 +6,7 @@ html, body {
     padding: 0;
 }
 
-/*!
-Hello!
-*/
+
 
 
 .animated {
@@ -95,7 +93,7 @@ Hello!
     animation-name: flash;
   }
   
-  /* originally authored by Nick Pettit - https://github.com/nickpettit/glide */
+
   
   @-webkit-keyframes pulse {
     0% {
@@ -376,7 +374,6 @@ Hello!
     animation-name: tada;
   }
   
-  /* originally authored by Nick Pettit - https://github.com/nickpettit/glide */
   
   @-webkit-keyframes wobble {
     0% {
